@@ -1,6 +1,10 @@
 export function createTask(baseNode) {
+
+    const task = document.createElement("div");
+    task.classList.add("task");
+
     const prioDiv = document.createElement("div");
-    prioDiv.classList.add(prioDiv);
+    prioDiv.classList.add("prioDiv");
 
     const prioInput = document.createElement("input");
     prioInput.setAttribute("type", "number");
@@ -16,12 +20,13 @@ export function createTask(baseNode) {
     const completeButton = document.createElement("button");
     completeButton.setAttribute("id", "completeButton");
 
-    baseNode.appendChild(prioDiv);
+    baseNode.appendChild(task);
+    task.appendChild(prioDiv);
     prioDiv.appendChild(prioInput);
     prioDiv.appendChild(deleteButton);
-    baseNode.appendChild(textDiv);
+    task.appendChild(textDiv);
     textDiv.appendChild(noteTitle);
     textDiv.appendChild(noteContent);
-    baseNode.appendChild(completeButton);
+    task.appendChild(completeButton);
 
 }

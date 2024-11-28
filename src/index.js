@@ -4,7 +4,7 @@ import { createTask } from "../modules/task";
 
 const content = document.getElementById("content");
 
-//createNavBar(content);
+createNavBar(content);
 createTask(content);
 
 
